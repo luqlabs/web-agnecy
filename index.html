@@ -14,38 +14,153 @@
   gtag('js', new Date());
   gtag('config', 'G-B6KMY04BE0');
 </script>
-<style>
+
+
+<style id="mobile-fix">
 @media (max-width: 991px) {
-  html { font-size: 14px !important; }
-  .heading._2xl { font-size: 3.5rem !important; line-height: 1 !important; margin-top: 4rem !important; padding: 0 1rem; text-align: center !important; }
-  .paragraph.x-large { font-size: 1.25rem !important; line-height: 1.4 !important; margin-top: -1rem !important; padding: 0 1rem; text-align: center !important; }
-  .heading-14-copyasd { font-size: 2.2rem !important; line-height: 1.1 !important; }
-  .text-block-19, .text-block-19-copysdf { font-size: 1.1rem !important; line-height: 1.4 !important; }
-  .heading.s { font-size: 1.3rem !important; }
-  .services-card, .services-card._2, .services-card._3 { padding: 1.5rem !important; margin-bottom: 1rem !important; border-radius: 1rem !important; }
-  .services-card-title { font-size: 1.8rem !important; }
-  .services-short-text { font-size: 1rem !important; }
-  .question-container { padding: 1.2rem 1rem !important; }
-  .answer p { font-size: 1rem !important; }
-  .div-block-72 { padding: 2rem 1rem !important; margin-bottom: 1rem !important; flex-direction: column !important; text-align: center !important; align-items: center !important; }
-  .div-block-71 { display: flex !important; flex-direction: column !important; }
-  .nav-bar { padding: 1rem !important; }
-  .w-nav-menu { z-index: 9999 !important; background-color: #FFFDEB !important; padding: 1.5rem 1rem !important; text-align: center !important; border-bottom: 2px solid #ed5724 !important; position: absolute; left: 0; right: 0; top: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-  .nav-link { font-size: 1.2rem !important; margin: 0.5rem 0 !important; color: #1a1a1a !important; display: block !important; padding: 0.75rem !important; }
-  .showreel-wrapper { margin-top: 0.5rem !important; display: inline-flex !important; }
-  .footer-social-button { width: 45px !important; height: 45px !important; }
-  .footer-socials { position: fixed !important; right: 10px !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 9999 !important; flex-direction: column !important; display: flex !important; gap: 0.5rem !important; background: transparent !important; }
-  .banner-text { font-size: 0.85rem !important; }
-  .nav-cta-button-container { display: flex !important; justify-content: center !important; margin-top: 0.5rem !important; }
-  .logo_block img { height: 25px !important; }
-  .logo_carousel { padding: 1.5rem 0 !important; }
-  .fixed-progress-nav { display: flex !important; flex-direction: column !important; position: fixed !important; left: 10px !important; top: 50% !important; transform: translateY(-50%) !important; width: auto !important; height: auto !important; gap: 15px !important; z-index: 999 !important; background: transparent !important; border: none !important; box-shadow: none !important; } .fixed-progress-item { display: flex !important; flex-direction: column !important; gap: 5px !important; } 
-  .footer-team { flex-direction: column !important; gap: 1.5rem !important; align-items: center !important; display: flex !important; }
-  .team-member { width: 100% !important; max-width: 300px !important; }
-  .hero-intro-arrow { display: none !important; } 
-  .section, .section-2, .section-2-copydsf, .section-xlarge, .section-copyasd-copyads { padding-left: 1rem !important; padding-right: 1rem !important; }
-  .w-nav-button { display: flex !important; align-items: center !important; justify-content: center !important; }
-  .showreel-link img { width: 50px !important; }
+  /* Hide desktop progress nav completely on mobile */
+  .fixed-progress-nav {
+    display: none !important;
+  }
+
+  /* Hamburger menu - open from top left, stretch full width */
+  .w-nav-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    background-color: #FFFDEB !important;
+    z-index: 9999 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+    border-bottom: 3px solid #ed5724 !important;
+    padding: 1rem 1.5rem 1.5rem !important;
+    text-align: left !important;
+    display: none;
+    flex-direction: column !important;
+  }
+
+  .w-nav-menu.w--open {
+    display: flex !important;
+  }
+
+  /* Nav items left-aligned */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .nav-link {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    display: block !important;
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* Showreel button in menu */
+  .showreel-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .showreel-text {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+  }
+
+  .showreel-link img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Contact Us button */
+  .nav-cta-button-container {
+    width: 100% !important;
+    margin-top: 1rem !important;
+  }
+
+  .nav-link.primary {
+    background-color: #ed5724 !important;
+    color: white !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+    padding: 0.75rem 1.5rem !important;
+    border-bottom: none !important;
+    display: inline-block !important;
+    width: auto !important;
+  }
+
+  /* Navbar bar itself */
+  .nav-bar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    background-color: #FFFDEB !important;
+  }
+
+  /* Hero text */
+  .heading._2xl {
+    font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    padding: 0 1rem !important;
+  }
+
+  .paragraph.x-large {
+    font-size: clamp(1rem, 4vw, 1.25rem) !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Social media floating */
+  .footer-socials {
+    position: fixed !important;
+    right: 12px !important;
+    bottom: 80px !important;
+    top: auto !important;
+    transform: none !important;
+    flex-direction: column !important;
+    display: flex !important;
+    gap: 8px !important;
+    z-index: 9998 !important;
+  }
+
+  .footer-social-button {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  /* Services cards */
+  .services-card, .services-card._2, .services-card._3 {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .services-card-title { font-size: 1.6rem !important; }
+  .services-short-text { font-size: 0.95rem !important; }
+
+  /* FAQ */
+  .question-container { padding: 1rem !important; }
+  .heading.s { font-size: 1.1rem !important; }
+  .answer p { font-size: 0.95rem !important; }
+
+  /* General padding */
+  .w-container { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .container { padding-left: 1rem !important; padding-right: 1rem !important; }
 }
 </style>
 </head><body class="body"><div id="Announcement-Bar" class="banner-section"><div class="banner-container w-container"><div class="banner"><div class="banner-text">Butuh website profesional? <a href="https://wa.me/6282143133464" target="_blank" class="banner-link">Hubungi kami sekarang →</a></div></div></div><div class="curve-top-left"><div class="curve-top-left-insert"></div></div><div class="curve-top-right"><div class="curve-top-right-insert"></div></div></div><div data-collapse="small" data-animation="default" data-duration="400" data-easing2="ease" data-easing="ease" role="banner" class="nav-bar w-nav"><div class="nav-container w-container"><div class="logo-div"><a href="/" aria-current="page" class="nav-logo w-inline-block w--current"><div class="font-bricolage text-3xl font-black italic tracking-tighter" style="color: #fff; -webkit-text-stroke: 1.5px black; text-shadow: 3px 3px 0px #000, 2px 2px 0px #4ade80; padding-right: 8px;">LuqLabs</div></a></div><nav role="navigation" class="nav-content w-nav-menu"><div class="nav-menu"><a href="#About" class="nav-link w-nav-link">About</a><a href="/our-work" class="nav-link w-nav-link">Work</a></div><a href="https://youtube.com/shorts/d-oWByTJF1o?si=fLQ_92FyabGpspVr" target="_blank" class="showreel-wrapper w-inline-block"><div class="showreel-text">Showreel</div><div class="showreel-link"><img src="fonts/6823302eb6f9a174862267f1_Showreel%20Play%20Button.svg" loading="lazy" width="80" alt="" class="showreel-play-button"><div data-w-id="e2f849aa-269d-4b21-f408-e78d81cc4846" class="showreel-button-outline"></div></div></a><div class="nav-cta-button-container"><a href="https://cal.com/LuqLabs/30min" target="_blank" class="nav-link primary w-nav-link">Contact Us</a></div></nav><div data-w-id="3f56e2dd-2e69-0efb-84b0-fcc2747295bb" class="nav-button-animated w-nav-button"><div class="top-line"></div><div class="bottom-line"></div></div></div></div><div class="fixed-progress-nav" style="grid-template-columns: repeat(5, 1fr) !important;"><div id="w-node-_65a84c24-de35-2757-3905-5f48881a26f4-881a26e1" class="fixed-progress-item"><a href="#" class="progress-nav-number">01</a><a href="#" class="progress-nav-text">About</a><a href="#" class="absolute-nav-link-back w-inline-block"></a></div><div id="w-node-_83e0fc54-95aa-b6f1-a545-f70b795d60b1-881a26e1" class="fixed-progress-item"><a href="#Process" class="progress-nav-number">02</a><a href="#Process" class="progress-nav-text">Process</a><a href="#Process" class="absolute-nav-link-back w-inline-block"></a></div><div id="w-node-fc1c66f7-4ec5-d7c2-2da1-b79daff50f68-881a26e1" class="fixed-progress-item"><a href="#Services" class="progress-nav-number">03</a><a href="#Services" class="progress-nav-text">Services</a><a href="#Services" class="absolute-nav-link-back w-inline-block"></a></div><div id="w-node-_65a84c24-de35-2757-3905-5f48881a26ee-881a26e1" class="fixed-progress-item"><a href="#Work" class="progress-nav-number">04</a><a href="#Work" class="progress-nav-text">Work</a><a href="#Work" class="absolute-nav-link-back w-inline-block"></a></div><div id="w-node-_65a84c24-de35-2757-3905-5f48881a2700-881a26e1" class="fixed-progress-item"><a href="#FAQs" class="progress-nav-number">05</a><a href="#FAQs" class="progress-nav-text">FAQs</a><a href="#FAQs" class="absolute-nav-link-back w-inline-block"></a></div></div><div data-w-id="e34b2784-ffed-5417-6ca3-5bf5c8bf6b7a" class="wrapper"><div class="section-copy-copyasd hero-copyasdasd"><div class="container full-height w-container"><div class="hero-content-box"><div class="hero-intro-text-box"><p class="paragraph x-large">Kami adalah digital agency yang membantu bisnis Anda tampil profesional dan berkembang secara online.</p><img src="fonts/6823302eb6f9a174862267f0_Group%20652.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-w-id="03fa9c1a-f694-fbfe-3527-dda1028f655e" alt="" class="hero-intro-arrow"><div class="spacer _16"></div></div><div class="hero-title-box"><img src="fonts/6823302eb6f9a174862267e6_Group%20644.svg" loading="eager" alt="" class="sticker hero-3"><img src="fonts/6823302eb6f9a174862267f3_Group%20643.svg" loading="eager" alt="" class="sticker hero-1"><img src="fonts/6823302eb6f9a174862267e2_Group%20647.svg" loading="eager" alt="" class="sticker hero-2"><h1 class="heading _2xl">Partner digital terpercaya Anda</h1></div></div></div></div><div class="div-block-115"><section id="noda-logo-01" class="section-xlarge background-secondary"><div class="logo_wrapper"><div fb-carousel-direction="left" class="logo_carousel" fb-carousel-delay="500" fb-carousel-speed="60000" fb-carousel-overflow-size="0" fb-carousel="true" fb-carousel-pauseable="false" fb-carousel-trigger="on-load" fb-carousel-overflow="false"><div class="carousel-script w-embed w-script"><!-- Flowbase Booster [Carousel Ticker] -->
