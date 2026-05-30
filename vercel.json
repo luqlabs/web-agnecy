@@ -1,4 +1,6 @@
 {
   "buildCommand": "npx tailwindcss -i ./src/input.css -o ./css/output.css",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
 }
